@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m"
+                         xmlns:core="sap.ui.core">
+    <Dialog title="App Version" >
+        <content >
+        <HBox class="container">
+            <Text text="Version: {fragmentData>/version}" />
+        </HBox>
+        </content>
+        <buttons>
+            <Button text="OK" press="onOKVersion"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

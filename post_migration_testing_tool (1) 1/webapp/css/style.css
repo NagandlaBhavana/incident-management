@@ -1,0 +1,62 @@
+/* Enter your custom styles here */
+.margin {
+    margin-right: 20px;
+}
+
+.boldText {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.SuccessText {
+    /* background-color: #d4edda !important; Light green for success */
+    color: green;
+}
+
+.ErrorText {
+    /* background-color: #f8d7da !important; Light red for error */
+    color: red;
+}
+
+.container {
+    padding: 20px;
+}
+
+.setting_margin {
+    margin-left: 200px;
+}
+
+.msgId_margin {
+    margin-left: 840px;
+}
+
+.MarginRight {
+    margin-right: 50%;
+}
+
+.Left{
+    margin-left: 40px;
+}
+
+.totalpipoInt_colour {
+    color: #0394fc !important;
+    font-weight: bold;
+}
+
+.sort_style {
+    margin-bottom: 25%;
+}
+
+.link {
+    fill: none;
+    stroke: #913737;
+    stroke-opacity: .2;
+}
+.link:hover {
+    stroke-opacity: .5;
+}
+
+.ham1 {
+    border: none;
+}

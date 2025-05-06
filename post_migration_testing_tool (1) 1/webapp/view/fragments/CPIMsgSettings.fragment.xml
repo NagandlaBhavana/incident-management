@@ -1,0 +1,72 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog contentWidth="700px"  id="CPIMsgsettings" >
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Title text="View Settings"/>
+				</contentMiddle>
+				<contentRight>
+					<Button text="Reset" press="onResetCPIMsgSettings"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<IconTabBar headerBackgroundDesign="Solid"
+		id="idIconTabBarNoIconsCPIMsg"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="Columns" key="columns">
+					<content>
+						<OverflowToolbar >
+							<SearchField id="searchFieldCPIMsg" width="30%" placeholder="Search" search="onSearchPIPOInterfaceFrg"/>
+						</OverflowToolbar>
+						<List id="CPIMsgCheckboxList" mode="MultiSelect" selectionChange="onSelectionChangeCPIMsgs">
+							<items>
+								<StandardListItem title="Select All" type="Active" id="selectAllCPIMsgs" />
+								<StandardListItem title="GUID Message" id="GUIDMsgFragCPIMsg" type="Active" selected="true"/>
+								<StandardListItem title="Start Date" id="startDateFragCPIMsg" type="Active" selected="true"/>
+								<StandardListItem title="End Date" id="EndDateFragCPIMsg" type="Active" selected="true"/>
+								<StandardListItem title="Status" id="statusFragCPIMsg" type="Active" selected="true"/>
+							</items>
+						</List>
+					</content>
+				</IconTabFilter>
+				<IconTabFilter text="Sort" key="sort">
+					<content>
+						<ComboBox id="CPIIflowDetailsSort" placeholder="Sort By" class="sort_style">
+							<items>
+								<core:Item key="StartDate" text="Start Date" />
+								<core:Item key="EndDate" text="End Date" />
+							</items>
+						</ComboBox>
+						<Label text="" width="3rem"/>
+						<Button icon="sap-icon://sort-ascending" press="onSortAscendingCPIMsg"  id="sortAscendingBtnCPIMsg"/>
+						<Button icon="sap-icon://sort-descending" press="onSortDescendingCPIMsg"  id="sortDescendingBtnCPIMsg"/>
+						<Label text="" width="3rem"/>
+						<Text id="sorting_textCPIMsg" text="Sort" class="sapUiTinyMarginTop" />
+					</content>
+				</IconTabFilter> 
+
+				<IconTabFilter text="Filter" key="filter">
+				<HBox>
+					<VBox>
+                        <Label text="Start Date : " labelFor="StartDateFilter" class=""/>
+                        <DatePicker placeholder="Start Date" width="auto" change="onFilterStartDate" displayFormat="dd-MM-yyyy" id="StartDateFilter" valueFormat="yyyy-MM-dd"/>
+                    </VBox>
+                    <Label text="" width="3rem" />
+                    <VBox>
+						<Label text="End Date : " labelFor="EndDateFilter" class=""/>
+                        <DatePicker placeholder="End Date" width="auto" change="onFilterEndDate" displayFormat="dd-MM-yyyy" id="EndDateFilter" valueFormat="yyyy-MM-dd"/>                            
+                    </VBox>
+				</HBox>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		<buttons>
+			<Button text="OK" press="onOKCPIMsg"/>
+			<Button text="Cancel" press="onCancelCPIMsg"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

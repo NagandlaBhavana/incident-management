@@ -1,0 +1,35 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+      id="login1"
+      title="User Login" >
+      <content>
+      <HBox >
+        <Text width="1rem" />
+      <VBox class="sapUiSmallMargin">
+        <HBox>
+        <Text text="Username :"/>
+        <Text width="1rem" />
+        <Input id="username" placeholder="Enter User Name" width="10rem" />
+        </HBox>
+        <Text width="1rem"/>
+        <HBox>
+        <Text text="Password :"/>
+        <Text width="1rem"/>
+        <Input id="password" type="Password" placeholder="Enter Password" width="10rem"/>
+        </HBox>
+        <Text width="1rem"/>
+        <HBox >
+          <Text text="if you dont have account??"/>
+          <Text width="1rem"/>
+          <Link text="Register" press="onRegister" />
+        </HBox>
+         <Text width="1rem"/>
+         
+        <Button  type="Emphasized" width="80%"  text="Login" press="onclose"/>
+      </VBox>
+      </HBox>
+      </content>
+    </Dialog>
+</core:FragmentDefinition>
