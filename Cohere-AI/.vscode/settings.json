@@ -1,9 +1,0 @@
-{
-    "actions": [
-        {
-            "id": "openReadmeFile",
-            "actionType": "FILE",
-            "uri": "file:///home/user/projects/Cohere-AI/.gen/generation.log"
-        }
-    ]
-}
